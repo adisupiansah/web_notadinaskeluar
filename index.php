@@ -25,6 +25,10 @@ if (isset($_POST["cari"])) {
 
     $mahasiswa = cari($_POST["keyword"]);
 }
+
+// if (isset($_POST["pdf"])) {
+//     header("Location: cetakPDF.php");
+// }
 ?>
 
 <!DOCTYPE html>
@@ -190,8 +194,14 @@ if (isset($_POST["cari"])) {
     </div>
 
     <br>
-    <a href="cetak.php" class="btn btn-primary mb-2 mx-3"><i class="bi bi-printer mx-2"></i>Cetak</a>
-  
+    <!-- tombol download PDF -->
+    <div class="container mb-3">
+                <a class="btn btn-sm btn-warning" href="cetakPDF.php" target="_blank"><i class="bi bi-printer-fill mx-1"></i>Download pdf</a>
+        <!-- <form action="" method="post">
+            <input class="btn btn-success btn-sm" type="submit" name="pdf" value="Download pdf">
+        </form> -->
+    </div>
+        
 
     <!-- table -->
     <div class="container-fluid">
